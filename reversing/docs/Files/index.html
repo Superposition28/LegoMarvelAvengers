@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LEGO Marvel&#x27;s Avengers — Archive Census</title>
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+
+<body class="doc-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html#home" target="_parent">Documentation</a><span>/</span>Files</nav>
+    <h1>LEGO Marvel&#x27;s Avengers — Verified Archive &amp; Extension Census</h1>
+    <aside class="source-notice">
+        <p><strong>Game Scope:</strong> Era 4 (2016) &middot; PS3 EU/US/JP Redump ISOs &amp; EU/US PSN PKGs</p>
+    </aside>
+    <p class="callout">For the full 2005–2024 TT Games multi-title engine chronology and cross-game file census, see the <a href="../../../../../reversing/docs/Travellers_Tales/Files/index.html" target="_top">Traveller&#x27;s Tales Parent Architecture Hub</a>.</p>
+    <section class="doc-overview">
+        <h2>Empirical Archive &amp; Extension Census</h2>
+        <div class="table-scroll">
+            <table class="format-counts">
+                <caption>Empirically Inspected Builds &amp; Virtual Archive Censuses</caption>
+                <thead>
+                    <tr>
+                        <th>Title / Build</th>
+                        <th>Platform</th>
+                        <th>Engine Generation</th>
+                        <th>Container / TOC</th>
+                        <th>Compression</th>
+                        <th>Entries</th>
+                        <th>Hash Verify</th>
+                        <th>Key Observed Formats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LEGO Marvel&#x27;s Avengers (2016 EU/US)</strong><br><code>6 .HDR/.DAT pairs + 15.72 GB PAD.DAT · EBOOT 29,650,840 B</code></td>
+                        <td>PS3 (BLES02169 EU / BLUS31550 US, APP 01.00, SYS 04.7600)</td>
+                        <td>Era 4 — Late NXG (.CC40TAD v-8 / .CC4HSER v8)</td>
+                        <td><code>.CC40TAD v-8</code> (BE header, 10B nodes, 16B entries, dual ROTV MD5)</td>
+                        <td>Raw (56,677) / DFLT (18,575) / ZIPX RC4 (5,980)</td>
+                        <td><code>81,232</code></td>
+                        <td>100%</td>
+                        <td><code>.cbx 34,711, .an4 7,027, .led 6,270, .res 5,675, .txt 4,116, .msf 3,922, .tex 3,036, .nxg_textures 2,983, .ps3_shaders 2,766, .gsc 2,272, .grs 32</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>LEGO Marvel&#x27;s Avengers (2016 JP)</strong><br><code>6 .HDR/.DAT pairs, no PAD.DAT (8.79 GB ISO) · EBOOT 29,651,816 B</code></td>
+                        <td>PS3 (BLJM61329 JP, APP 01.00, SYS 04.7800)</td>
+                        <td>Era 4 — Late NXG (.CC40TAD v-8 / .CC4HSER v8)</td>
+                        <td><code>.CC40TAD v-8</code> (6 vols)</td>
+                        <td>Raw / DFLT / ZIPX RC4</td>
+                        <td>Verified</td>
+                        <td>Verified</td>
+                        <td>Regional build omitting <code>PAD.DAT</code> LBA padding</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>

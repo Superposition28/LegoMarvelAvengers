@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LEGO Marvel&#x27;s Avengers (PS3)</title>
+    <link rel="stylesheet" href="../../style/main.css">
+</head>
+
+<body class="doc-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../index.html#home" target="_parent">Documentation</a><span>/</span><a href="../../Files/index.html">Files</a><span>/</span>PS3</nav>
+    <h1>PS3 Filesystem &amp; Binary Notes</h1>
+    <aside class="source-notice">
+        <p><strong>Platform Inventory:</strong> Scoped strictly to PS3 builds (EU <code>BLES02169</code>, US <code>BLUS31550</code>, JP <code>BLJM61329</code>) and EU/US PSN PKGs of <em>LEGO Marvel&#x27;s Avengers</em>.</p>
+    </aside>
+    <section class="doc-overview">
+        <p>All three Redump ISOs use unencrypted ISO-9660 filesystems (EU/US 24.27 GB w/ 15-extent <code>15,716,916,719 B PAD.DAT</code>; JP 8,795,258,880 B omitting <code>PAD.DAT</code>) containing six paired <code>GAME*.HDR/.DAT</code> archives (<code>GAME</code> + <code>GAME0..4</code>) totaling <code>81,232</code> files across 38 observed extensions (plus <code>499 .png</code> UI assets).</p>
+        <div class="table-scroll">
+            <table class="format-counts">
+                <caption>PS3 Inspected Source Images &amp; Archives</caption>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Build / IDs</th>
+                        <th>Container &amp; TOC</th>
+                        <th>Observed Formats / Counts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LEGO Marvel&#x27;s Avengers (2016 EU / US)</td>
+                        <td><code>BLES02169</code> / <code>BLUS31550</code> &middot; SYS 04.7600 &middot; 6 <code>.HDR/.DAT</code> + 15.72 GB <code>PAD.DAT</code> &middot; EBOOT <code>29,650,840 B</code></td>
+                        <td><code>.CC40TAD v-8</code> (BE header, 10B nodes, 16B entries, dual <code>ROTV</code> MD5) &middot; Raw (56,677) / DFLT (18,575) / ZIPX RC4 (5,980) &middot; 100% hash (81,232/81,232)</td>
+                        <td>.cbx 34,711, .an4 7,027, .led 6,270, .res 5,675, .txt 4,116, .msf 3,922, .tex 3,036, .nxg_textures 2,983, .ps3_shaders 2,766, .gsc 2,272, .as 1,709, .cd 1,428, .sf 818, .dno 726, .giz 514, .ghg 498, .cu3 458, .sub 457, .txc 405, .ptl 316, .cpd 227, .xml 149, .par 70, .krw 48, .grs 32, .cfg 23, .tsh 17, .cpj 16, .ft2 8, .pak 7, .nvm 7, .csv 6, .binary 6, .subopt 6, .fst 2, .fnt 1, .glm 1</td>
+                    </tr>
+                    <tr>
+                        <td>LEGO Marvel&#x27;s Avengers (2016 JP)</td>
+                        <td><code>BLJM61329</code> &middot; SYS 04.7800 &middot; 6 <code>.HDR/.DAT</code> (NO <code>PAD.DAT</code>) &middot; EBOOT <code>29,651,816 B</code></td>
+                        <td><code>.CC40TAD v-8</code> (6 vols)</td>
+                        <td>Same core format set; omits optical disc LBA padding.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>PS3 NPDRM Packages (<code>.pkg</code> / <code>.rap</code>)</h2>
+        <div class="table-scroll">
+            <table class="format-counts">
+                <caption>LEGO Marvel&#x27;s Avengers PS3 PSN Digital PKGs (Inspected Headers)</caption>
+                <thead>
+                    <tr>
+                        <th>Package</th>
+                        <th>Content ID</th>
+                        <th>Type / DRM</th>
+                        <th>Size</th>
+                        <th>Items &amp; License Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>LEGO Marvel&#x27;s Avengers</em> PSN (EU)</td>
+                        <td><code>EP1018-NPEB02270_00-LEGOMARVELAVENGE</code></td>
+                        <td>type=5 (GameExec) / drm=2</td>
+                        <td><code>8,281,192,096 B</code></td>
+                        <td>50 items + 16-byte <code>.rap</code> license.</td>
+                    </tr>
+                    <tr>
+                        <td><em>LEGO Marvel&#x27;s Avengers</em> PSN (US)</td>
+                        <td><code>UP1018-NPUB31708_00-LEGOMARVELAVENGE</code></td>
+                        <td>type=5 (GameExec) / drm=2</td>
+                        <td><code>8,279,000,544 B</code></td>
+                        <td>37 items + 16-byte <code>.rap</code> license.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>
